@@ -9,45 +9,57 @@ let flights = [
     status: 'BOARDING',
   },
   {
-    time: '12:39',
+    time: '08:39',
     destination: 'CALGARY',
     flight: 'CL 320',
     gate: 'C 31',
-    status: 'ON TIME',
+    status: 'BOARDING',
   },
   {
-    time: '13:21',
+    time: '10:21',
     destination: 'ATHENS',
     flight: 'AT 201',
     gate: 'A 19',
     status: 'ON TIME',
   },
   {
-    time: '14:01',
+    time: '11:01',
     destination: 'MALTA',
     flight: 'MA 402',
     gate: 'B 02',
     status: 'DELAYED',
   },
   {
-    time: '15:22',
+    time: '12:22',
     destination: 'AGADIR',
     flight: 'MO 211',
     gate: 'A 32',
     status: 'ON TIME',
   },
   {
-    time: '15:22',
+    time: '13:22',
     destination: 'HAVANA',
     flight: 'CU 234',
     gate: 'E 32',
-    status: 'CANCELLED',
+    status: 'DELAYED',
   },
 ];
 
-const destinations = ['LIMA', 'BANGKOK', 'ROMA', 'CAIRO', 'LA PAZ', 'SEOUL'];
-const statuses = ['ON TIME', 'DELAYED', 'CANCELLED'];
-let hour = 16;
+const destinations = [
+  'LIMA',
+  'BANGKOK',
+  'ROMA',
+  'CAIRO',
+  'LA PAZ',
+  'SEOUL',
+  'BOGOTA',
+  'SEATTLE',
+  'PARIS',
+  'PERTH',
+  'ZURICH',
+];
+const statuses = ['ON TIME', 'DELAYED'];
+let hour = 14;
 
 function populateTable() {
   for (const flight of flights) {
@@ -119,4 +131,4 @@ function shuffleUp() {
 
 setInterval(() => {
   shuffleUp();
-}, 3000);
+}, 5000);
